@@ -6,6 +6,7 @@ COPY package*.json ./
 RUN npm ci
 
 COPY . .
+RUN npm run build
 
 FROM node:20.11-alpine3.18 as runtime
 
